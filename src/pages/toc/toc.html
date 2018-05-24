@@ -1,0 +1,17 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+        Book App
+      </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <h1>Table of Contents</h1>
+    <ul class="chapters">
+        <li *ngFor="let chapter of chapters"
+          (click)="onSelect(chapter)">
+          <span class="badge">{{chapter.id}} - {{chapter.name}}</span>
+        </li>
+    </ul>
+</ion-content>
